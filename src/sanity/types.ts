@@ -27,6 +27,12 @@ export type SiteSettings = {
   };
 };
 
+export type Features = {
+  _type: 'features';
+  title?: string;
+  text?: string;
+};
+
 export type Logos = {
   _type: 'logos';
   title?: string;
@@ -46,6 +52,9 @@ export type PageBuilder = Array<
   | ({
       _key: string;
     } & Logos)
+  | ({
+      _key: string;
+    } & Features)
 >;
 
 export type Page = {
@@ -179,6 +188,7 @@ export type Geopoint = {
 
 export type AllSanitySchemaTypes =
   | SiteSettings
+  | Features
   | Logos
   | Hero
   | PageBuilder
@@ -209,6 +219,12 @@ export type PAGE_QUERYResult = {
   content: Array<
     | {
         _key: string;
+        _type: 'features';
+        title?: string;
+        text?: string;
+      }
+    | {
+        _key: string;
         _type: 'hero';
         pretitle?: string;
         title?: string;
@@ -237,6 +253,12 @@ export type HOME_PAGE_QUERYResult =
         title?: string;
         slug?: Slug;
         content: Array<
+          | {
+              _key: string;
+              _type: 'features';
+              title?: string;
+              text?: string;
+            }
           | {
               _key: string;
               _type: 'hero';

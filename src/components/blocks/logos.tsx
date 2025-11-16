@@ -14,11 +14,14 @@ const LOGOS = [
   { srcLight: '/icons/Logo-9.svg', srcDark: '/icons/Logo-9dark.svg' },
 ];
 
-export function Logos() {
+type LogosProps = Extract<NonNullable<NonNullable<PAGE_QUERYResult>['content']>[number], { _type: 'logos' }>;
+
+export function Logos({ title }: LogosProps) {
   return (
     <div className="px-5 pt-5 pb-14 md:px-8 md:pt-10 overflow-hidden items-center justify-center flex flex-col">
       <p className="text-primary-800 text-base text-center mb-5">
-        160,000+ customers in over 120 countries grow their businesses with Neuros
+        {title}
+        {/* 160,000+ customers in over 120 countries grow their businesses with Neuros */}
       </p>
       <div className="grid grid-cols-5 gap-10 w-280">
         {LOGOS.map((logo, index) => (
