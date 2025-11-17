@@ -34,9 +34,9 @@ export function PageBuilder({ content }: PageBuilderProps) {
             return <Applications key={block._key} {...block} />;
           case 'faq':
             return <FAQ key={block._key} {...block} />;
-          default:
-            // This is a fallback for when we don't have a block type
-            return <div key={block._key}>Block not found: {block._type}</div>;
+          // default:
+          //   // This is a fallback for when we don't have a block type
+          //   return <div key={block._key}>Block not found: {block._type}</div>;
         }
       })}
     </main>
