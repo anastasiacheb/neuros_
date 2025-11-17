@@ -27,6 +27,24 @@ export type SiteSettings = {
   };
 };
 
+export type Benefits = {
+  _type: 'benefits';
+  title?: string;
+};
+
+export type Clients = {
+  _type: 'clients';
+  title?: string;
+  text?: string;
+  clients?: Array<{
+    title?: string;
+    name?: string;
+    role?: string;
+    _type: 'client';
+    _key: string;
+  }>;
+};
+
 export type Features = {
   _type: 'features';
   title?: string;
@@ -55,6 +73,12 @@ export type PageBuilder = Array<
   | ({
       _key: string;
     } & Features)
+  | ({
+      _key: string;
+    } & Clients)
+  | ({
+      _key: string;
+    } & Benefits)
 >;
 
 export type Page = {
@@ -188,6 +212,8 @@ export type Geopoint = {
 
 export type AllSanitySchemaTypes =
   | SiteSettings
+  | Benefits
+  | Clients
   | Features
   | Logos
   | Hero
@@ -217,6 +243,24 @@ export type PAGE_QUERYResult = {
   title?: string;
   slug?: Slug;
   content: Array<
+    | {
+        _key: string;
+        _type: 'benefits';
+        title?: string;
+      }
+    | {
+        _key: string;
+        _type: 'clients';
+        title?: string;
+        text?: string;
+        clients?: Array<{
+          title?: string;
+          name?: string;
+          role?: string;
+          _type: 'client';
+          _key: string;
+        }>;
+      }
     | {
         _key: string;
         _type: 'features';
@@ -253,6 +297,24 @@ export type HOME_PAGE_QUERYResult =
         title?: string;
         slug?: Slug;
         content: Array<
+          | {
+              _key: string;
+              _type: 'benefits';
+              title?: string;
+            }
+          | {
+              _key: string;
+              _type: 'clients';
+              title?: string;
+              text?: string;
+              clients?: Array<{
+                title?: string;
+                name?: string;
+                role?: string;
+                _type: 'client';
+                _key: string;
+              }>;
+            }
           | {
               _key: string;
               _type: 'features';

@@ -7,6 +7,8 @@ export const pageBuilderType = defineType({
     defineArrayMember({ type: 'hero' }),
     defineArrayMember({ type: 'logos' }),
     defineArrayMember({ type: 'features' }),
+    defineArrayMember({ type: 'clients' }),
+    defineArrayMember({ type: 'benefits' }),
   ],
   options: {
     insertMenu: {

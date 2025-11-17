@@ -4,8 +4,10 @@ import { pageBuilderType } from './pageBuilderType';
 import { heroType } from './blocks/heroType';
 import { logosType } from './blocks/logosType';
 import { featuresType } from './blocks/featuresType';
+import { clientsType } from './blocks/clientsType';
+import { benefitsType } from './blocks/benefitsType';
 import { siteSettingsType } from './siteSettingsType';
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [pageType, pageBuilderType, heroType, logosType, featuresType, siteSettingsType],
+  types: [pageType, pageBuilderType, heroType, logosType, featuresType, clientsType, benefitsType, siteSettingsType],
 };
