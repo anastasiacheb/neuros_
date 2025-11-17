@@ -6,8 +6,21 @@ import { logosType } from './blocks/logosType';
 import { featuresType } from './blocks/featuresType';
 import { clientsType } from './blocks/clientsType';
 import { benefitsType } from './blocks/benefitsType';
+import { applicationsType } from './blocks/applicationsType';
+import { faqType } from './blocks/faqType';
 import { siteSettingsType } from './siteSettingsType';
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [pageType, pageBuilderType, heroType, logosType, featuresType, clientsType, benefitsType, siteSettingsType],
+  types: [
+    pageType,
+    pageBuilderType,
+    heroType,
+    logosType,
+    featuresType,
+    clientsType,
+    benefitsType,
+    applicationsType,
+    faqType,
+    siteSettingsType,
+  ],
 };

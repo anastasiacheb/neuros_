@@ -27,6 +27,18 @@ export type SiteSettings = {
   };
 };
 
+export type Faq = {
+  _type: 'faq';
+  title?: string;
+  text?: string;
+};
+
+export type Applications = {
+  _type: 'applications';
+  title?: string;
+  text?: string;
+};
+
 export type Benefits = {
   _type: 'benefits';
   title?: string;
@@ -79,6 +91,12 @@ export type PageBuilder = Array<
   | ({
       _key: string;
     } & Benefits)
+  | ({
+      _key: string;
+    } & Applications)
+  | ({
+      _key: string;
+    } & Faq)
 >;
 
 export type Page = {
@@ -212,6 +230,8 @@ export type Geopoint = {
 
 export type AllSanitySchemaTypes =
   | SiteSettings
+  | Faq
+  | Applications
   | Benefits
   | Clients
   | Features
@@ -245,6 +265,12 @@ export type PAGE_QUERYResult = {
   content: Array<
     | {
         _key: string;
+        _type: 'applications';
+        title?: string;
+        text?: string;
+      }
+    | {
+        _key: string;
         _type: 'benefits';
         title?: string;
       }
@@ -260,6 +286,12 @@ export type PAGE_QUERYResult = {
           _type: 'client';
           _key: string;
         }>;
+      }
+    | {
+        _key: string;
+        _type: 'faq';
+        title?: string;
+        text?: string;
       }
     | {
         _key: string;
@@ -299,6 +331,12 @@ export type HOME_PAGE_QUERYResult =
         content: Array<
           | {
               _key: string;
+              _type: 'applications';
+              title?: string;
+              text?: string;
+            }
+          | {
+              _key: string;
               _type: 'benefits';
               title?: string;
             }
@@ -314,6 +352,12 @@ export type HOME_PAGE_QUERYResult =
                 _type: 'client';
                 _key: string;
               }>;
+            }
+          | {
+              _key: string;
+              _type: 'faq';
+              title?: string;
+              text?: string;
             }
           | {
               _key: string;

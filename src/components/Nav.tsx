@@ -35,8 +35,8 @@ export default function Nav() {
             className={`flex-col lg:flex-row lg:gap-8 absolute bg-primary-0 w-full lg:top-[67px] md:top-19.25 lg:static transition-all ease-linear duration-300 z-0 flex ${isOpen ? 'left-0' : '-left-full -translate-x-1/4'} top-19.25 lg:-top-16.25 lg:translate-none`}>
             <NavLink name="Features" href="/#features" />
             <NavLink name="Applications" href="/applications" />
-            <NavLink name="Pricing" href="/#pricing" />
-            <NavLink name="Contact" href="/#contact" />
+            <NavLink name="Testimonials" href="/#testimonials" />
+            <NavLink name="FAQ" href="/#faq" />
           </div>
         </div>
 
