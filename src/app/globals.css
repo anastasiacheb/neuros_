@@ -5,6 +5,7 @@
   --foreground: #171717;
 
   --primary-0: #ffffff;
+  --primary-01: #ffffff;
   --primary-100: #f5f7fa;
   --primary-200: #eceef4;
   --primary-300: #d2d5e2;
@@ -28,6 +29,7 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary-0: var(--primary-0);
+  --color-primary-01: var(--primary-01);
   --color-primary-100: var(--primary-100);
   --color-primary-200: var(--primary-200);
   --color-primary-300: var(--primary-300);
@@ -58,6 +60,7 @@
     --background: #0a0a0a;
     --foreground: #ededed;
     --primary-0: #171c2f;
+    --primary-01: #ffffff;
     --primary-100: #1d2235;
     --primary-200: #2b324a;
     --primary-300: #3c4561;
